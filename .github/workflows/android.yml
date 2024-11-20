@@ -1,0 +1,59 @@
+name: android_build
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Release tag name'
+        required: true
+        default: '1.0.0'
+
+jobs:
+  build:
+    name: Build APK
+    runs-on: ubuntu-latest  # 使用最新的 Ubuntu 环境
+
+    steps:
+      # 1. 检出代码
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. 设置 Java 环境（JDK 1.8）
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '8'
+
+      # 3. 缓存 Gradle 依赖
+      - name: Cache Gradle dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      # 4. 构建 APK
+      - name: Build APK
+        run: bash ./gradlew assembleRelease --stacktrace
+
+      # 5. 上传构建产物
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-apk
+          path: app/build/outputs/apk/release/*.apk
+          
+      # 6. 发布到 GitHub Releases
+      - name: Upload APK to GitHub Releases
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: app/build/outputs/apk/release/*.apk
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.event.inputs.tag_name }}
+          name: "Android APK Release"
+          body: |
+            This release includes:
+            - The latest APK build.
+            - Built using Gradle on GitHub Actions.
