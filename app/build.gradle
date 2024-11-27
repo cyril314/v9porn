@@ -41,6 +41,17 @@ android {
             minifyEnabled false
         }
     }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            if (variant.buildType.name == 'debug') {
+                outputFileName = 'app-debug.apk'
+            } else {
+                outputFileName = "v9porn_v${variant.versionName}.apk"
+            }
+        }
+    }
+
     lintOptions {
         checkReleaseBuilds false
         // Or, if you prefer, you can continue to check for errors in release builds,
