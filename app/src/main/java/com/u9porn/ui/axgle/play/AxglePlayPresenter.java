@@ -4,7 +4,7 @@ import android.arch.lifecycle.Lifecycle;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import com.awesapp.isafe.svs.parsers.PSVS21;
+import com.u9porn.ui.axgle.PSVS21;
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
 import com.trello.rxlifecycle2.LifecycleProvider;
 import com.u9porn.data.DataManager;

@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao' // apply plugin
-apply plugin: 'bugly'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
@@ -139,8 +138,6 @@ dependencies {
         exclude group: 'com.android.support'
     }
     implementation project(':exolibrary')
-    implementation 'com.tencent.bugly:crashreport:2.8.6'
-    implementation 'com.tencent.bugly:nativecrashreport:3.6.0'
     implementation "ru.noties:markwon:$markwonVersion"
 
     implementation 'io.apisense:rhino-android:1.0'
