@@ -25,9 +25,9 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
-      - uses: gradle/gradle-build-action@v1
+      - uses: gradle/gradle-build-action@v3
         with:
-          gradle-version: current
+          gradle-version: '6.8'
           arguments: assembleRelease --stacktrace
       - run: mv app/build/outputs/apk/release/*.apk .
       - uses: ncipollo/release-action@v1
