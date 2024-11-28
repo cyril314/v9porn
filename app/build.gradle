@@ -5,10 +5,11 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
         applicationId "com.u9porn"
-        versionCode rootProject.ext.codeVersion
-        versionName rootProject.ext.apkVersion
+
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.codeVersion
+        versionName rootProject.ext.apkVersion
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
@@ -31,12 +32,12 @@ android {
 
     buildTypes {
         debug {
-            ext.enableBugsnag = false
+            proguardFiles 'proguard-rules.pro'
             signingConfig signingConfigs.config
-            debuggable true
+            minifyEnabled false
         }
         release {
-            proguardFiles 'proguard-fresco.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-fresco.pro'
             signingConfig signingConfigs.config
             minifyEnabled false
         }
@@ -52,15 +53,16 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     lintOptions {
         checkReleaseBuilds false
         // Or, if you prefer, you can continue to check for errors in release builds,
         // but continue the build even when errors are found:
         abortOnError false
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
