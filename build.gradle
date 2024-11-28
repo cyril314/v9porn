@@ -40,7 +40,7 @@ tasks.withType(JavaCompile) {
 
 // Define versions in a single place
 ext {
-    apkVersion = 'vip'
+    apkVersion = '1.0.0'
     codeVersion = 99
     // Sdk and tools
     minSdkVersion = 16
