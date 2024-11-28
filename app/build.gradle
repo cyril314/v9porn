@@ -37,9 +37,9 @@ android {
             minifyEnabled false
         }
         release {
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-fresco.pro'
+            proguardFiles 'proguard-fresco.pro'
             signingConfig signingConfigs.config
-            minifyEnabled true
+            minifyEnabled false
         }
     }
 
