@@ -1,14 +1,15 @@
 package com.u9porn.ui.download;
 
-import android.arch.lifecycle.Lifecycle;
+import androidx.lifecycle.Lifecycle;
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
 import com.liulishuo.filedownloader.FileDownloader;
 import com.liulishuo.filedownloader.model.FileDownloadStatus;
 import com.liulishuo.filedownloader.util.FileDownloadUtils;
-import com.orhanobut.logger.Logger;
+import com.u9porn.ui.about.AboutPresenter;
+import com.u9porn.utils.Logger;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.trello.rxlifecycle2.LifecycleProvider;
 import com.u9porn.data.DataManager;
@@ -44,6 +45,8 @@ import io.reactivex.schedulers.Schedulers;
  */
 
 public class DownloadPresenter extends MvpBasePresenter<DownloadView> implements IDownload {
+
+    private static final String TAG = DownloadPresenter.class.getSimpleName();
 
     private DataManager dataManager;
     private LifecycleProvider<Lifecycle.Event> provider;
@@ -131,9 +134,9 @@ public class DownloadPresenter extends MvpBasePresenter<DownloadView> implements
             }
             return;
         }
-        Logger.d("视频连接：" + videoResult.getVideoUrl());
+        Logger.t(TAG).d("视频连接：" + videoResult.getVideoUrl());
         String path = v9PornItem.getDownLoadPath(getCustomDownloadVideoDirPath());
-        Logger.d(path);
+        Logger.t(TAG).d(path);
         boolean isDownloadNeedWifi = dataManager.isDownloadVideoNeedWifi();
         int id = DownloadManager.getImpl().startDownload(videoResult.getVideoUrl(), path, isDownloadNeedWifi, isForceReDownload);
         if (tmp.getAddDownloadDate() == null) {
@@ -302,44 +305,44 @@ public class DownloadPresenter extends MvpBasePresenter<DownloadView> implements
      */
     private void copyCacheFile(final File videoCacheDir, final V9PornItem v9PornItem, final DownloadListener downloadListener) throws IOException {
         Observable.create(new ObservableOnSubscribe<File>() {
-            @Override
-            public void subscribe(ObservableEmitter<File> e) throws Exception {
-                VideoCacheFileNameGenerator myFileNameGenerator = new VideoCacheFileNameGenerator();
-                String cacheFileName = myFileNameGenerator.generate(v9PornItem.getVideoResult().getVideoUrl());
-                File fromFile = new File(videoCacheDir, cacheFileName);
-                if (!fromFile.exists() || fromFile.length() <= 0) {
-                    e.onError(new Exception("缓存文件错误，无法拷贝"));
-                }
-                e.onNext(fromFile);
-                e.onComplete();
-            }
-        }).map(new Function<File, V9PornItem>() {
-            @Override
-            public V9PornItem apply(File fromFile) throws Exception {
-                File toFile = new File(v9PornItem.getDownLoadPath(getCustomDownloadVideoDirPath()));
-                if (toFile.exists() && toFile.length() > 0) {
-                    throw new Exception("已经下载过了");
-                } else {
-                    if (!toFile.createNewFile()) {
-                        throw new Exception("创建文件失败");
+                    @Override
+                    public void subscribe(ObservableEmitter<File> e) throws Exception {
+                        VideoCacheFileNameGenerator myFileNameGenerator = new VideoCacheFileNameGenerator();
+                        String cacheFileName = myFileNameGenerator.generate(v9PornItem.getVideoResult().getVideoUrl());
+                        File fromFile = new File(videoCacheDir, cacheFileName);
+                        if (!fromFile.exists() || fromFile.length() <= 0) {
+                            e.onError(new Exception("缓存文件错误，无法拷贝"));
+                        }
+                        e.onNext(fromFile);
+                        e.onComplete();
                     }
-                }
-                FileUtils.copyFile(fromFile, toFile);
-                v9PornItem.setTotalFarBytes((int) fromFile.length());
-                v9PornItem.setSoFarBytes((int) fromFile.length());
-                return v9PornItem;
-            }
-        }).map(new Function<V9PornItem, String>() {
-            @Override
-            public String apply(V9PornItem v9PornItem) throws Exception {
-                v9PornItem.setStatus(FileDownloadStatus.completed);
-                v9PornItem.setProgress(100);
-                v9PornItem.setFinishedDownloadDate(new Date());
-                v9PornItem.setDownloadId(FileDownloadUtils.generateId(v9PornItem.getVideoResult().getVideoUrl(), v9PornItem.getDownLoadPath(getCustomDownloadVideoDirPath())));
-                dataManager.updateV9PornItem(v9PornItem);
-                return "下载完成";
-            }
-        })
+                }).map(new Function<File, V9PornItem>() {
+                    @Override
+                    public V9PornItem apply(File fromFile) throws Exception {
+                        File toFile = new File(v9PornItem.getDownLoadPath(getCustomDownloadVideoDirPath()));
+                        if (toFile.exists() && toFile.length() > 0) {
+                            throw new Exception("已经下载过了");
+                        } else {
+                            if (!toFile.createNewFile()) {
+                                throw new Exception("创建文件失败");
+                            }
+                        }
+                        FileUtils.copyFile(fromFile, toFile);
+                        v9PornItem.setTotalFarBytes((int) fromFile.length());
+                        v9PornItem.setSoFarBytes((int) fromFile.length());
+                        return v9PornItem;
+                    }
+                }).map(new Function<V9PornItem, String>() {
+                    @Override
+                    public String apply(V9PornItem v9PornItem) throws Exception {
+                        v9PornItem.setStatus(FileDownloadStatus.completed);
+                        v9PornItem.setProgress(100);
+                        v9PornItem.setFinishedDownloadDate(new Date());
+                        v9PornItem.setDownloadId(FileDownloadUtils.generateId(v9PornItem.getVideoResult().getVideoUrl(), v9PornItem.getDownLoadPath(getCustomDownloadVideoDirPath())));
+                        dataManager.updateV9PornItem(v9PornItem);
+                        return "下载完成";
+                    }
+                })
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .compose(provider.<String>bindUntilEvent(Lifecycle.Event.ON_DESTROY))
@@ -379,7 +382,7 @@ public class DownloadPresenter extends MvpBasePresenter<DownloadView> implements
                 });
     }
 
-    public int getPlaybackEngine(){
+    public int getPlaybackEngine() {
         return dataManager.getPlaybackEngine();
     }
 

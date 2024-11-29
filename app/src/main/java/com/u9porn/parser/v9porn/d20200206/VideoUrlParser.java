@@ -2,7 +2,7 @@ package com.u9porn.parser.v9porn.d20200206;
 
 import android.text.TextUtils;
 
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.u9porn.data.db.entity.VideoResult;
 import com.u9porn.data.model.User;
 import com.u9porn.parser.v9porn.BaseVideoPlayUrlParser;

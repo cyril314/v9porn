@@ -2,11 +2,11 @@ package com.u9porn.ui.porn9video.author;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.NonNull;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 
@@ -16,13 +16,11 @@ import com.helper.loadviewhelper.load.LoadViewHelper;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.u9porn.R;
 import com.u9porn.adapter.V91PornAdapter;
-import com.u9porn.constants.KeysActivityRequestResultCode;
 import com.u9porn.data.db.entity.V9PornItem;
 import com.u9porn.ui.MvpActivity;
 import com.u9porn.utils.LoadHelperUtils;
 import com.u9porn.constants.Keys;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;

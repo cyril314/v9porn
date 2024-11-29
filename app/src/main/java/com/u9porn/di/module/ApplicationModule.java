@@ -11,7 +11,7 @@ import com.danikula.videocache.HttpProxyCacheServer;
 import com.danikula.videocache.headers.HeaderInjector;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.u9porn.constants.Constants;
 import com.u9porn.cookie.AppCookieManager;
 import com.u9porn.cookie.CookieManager;

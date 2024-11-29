@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.qmuiteam.qmui.widget.dialog.QMUIDialog;
 import com.sdsmdg.tastytoast.TastyToast;

@@ -3,7 +3,7 @@ package com.u9porn.parser;
 import android.text.TextUtils;
 
 import com.google.gson.Gson;
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.u9porn.data.model.BaseResult;
 import com.u9porn.data.model.pxgav.PxgavModel;
 import com.u9porn.data.model.pxgav.PxgavResultWithBlockId;

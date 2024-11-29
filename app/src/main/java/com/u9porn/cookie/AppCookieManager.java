@@ -3,7 +3,7 @@ package com.u9porn.cookie;
 import android.text.TextUtils;
 
 import com.franmontiel.persistentcookiejar.PersistentCookieJar;
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.u9porn.data.AppDataManager;
 import com.u9porn.rxjava.CallBackWrapper;
 

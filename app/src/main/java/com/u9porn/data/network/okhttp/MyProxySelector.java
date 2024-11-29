@@ -2,7 +2,7 @@ package com.u9porn.data.network.okhttp;
 
 import android.text.TextUtils;
 
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.u9porn.data.prefs.PreferencesHelper;
 
 import java.io.IOException;

@@ -1,7 +1,7 @@
 package com.u9porn.adapter;
 
-import android.support.annotation.Nullable;
-import android.support.v7.widget.SwitchCompat;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SwitchCompat;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.CompoundButton;

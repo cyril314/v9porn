@@ -1,6 +1,6 @@
 package com.u9porn.parser.v9porn.d20210320;
 
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.u9porn.MyApplication;
 import com.u9porn.data.db.entity.VideoResult;
 import com.u9porn.data.model.User;

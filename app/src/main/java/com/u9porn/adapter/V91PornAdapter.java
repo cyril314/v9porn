@@ -1,7 +1,7 @@
 package com.u9porn.adapter;
 
 import android.net.Uri;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.widget.ImageView;
 
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
@@ -10,8 +10,6 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.u9porn.R;
 import com.u9porn.data.db.entity.V9PornItem;
 import com.u9porn.utils.GlideApp;
-
-import java.util.List;
 
 /**
  * @author flymegoc

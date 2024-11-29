@@ -1,7 +1,7 @@
 package com.u9porn.utils;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.text.format.Formatter;
 
 import java.io.File;
@@ -12,8 +12,8 @@ import java.io.File;
  * @author flymegoc
  * @date 2018/1/13
  */
-
 public class AppCacheUtils {
+
     public final static long MAX_VIDEO_CACHE_SIZE = 800 * 1024 * 1024;
     private final static String RX_CACHE_DIR = "/rx_cache";
     private final static String VIDEO_CACHE_DIR = "/video_cache";

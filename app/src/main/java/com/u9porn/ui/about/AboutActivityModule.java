@@ -1,12 +1,10 @@
 package com.u9porn.ui.about;
 
-import android.arch.lifecycle.Lifecycle;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.lifecycle.Lifecycle;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.trello.lifecycle2.android.lifecycle.AndroidLifecycle;
 import com.trello.rxlifecycle2.LifecycleProvider;
-import com.u9porn.ui.download.DownloadActivity;
 
 import dagger.Module;
 import dagger.Provides;

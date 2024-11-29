@@ -11,17 +11,17 @@
         android:text="提示：地址设置只需要主地址，不需要长长的一串，例如：你要设置百度为地址，现在你有地址https://www.baidu.com/s?wd=xxxxrsv_iqid=0xfea01101000018c1xxxxxxx,后面接着长长的一串东西，但是你不需要输入这么多，只需要输入第一个“/”之前的内容即可(包括“/”),所以我们最终设置的地址应该是：https://www.baidu.com/，以此类推。测试结果仅供参考"
         android:textColor="@color/common_black_white_text_color" />
 
-    <android.support.v4.widget.Space
+    <androidx.legacy.widget.Space
         android:layout_width="match_parent"
         android:layout_height="10dp" />
 
-    <android.support.v7.widget.AppCompatAutoCompleteTextView
+    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
         android:id="@+id/atv_dialog_address_setting_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="示例：https://www.baidu.com/" />
 
-    <android.support.v4.widget.Space
+    <androidx.legacy.widget.Space
         android:layout_width="match_parent"
         android:layout_height="10dp" />
 
@@ -31,7 +31,7 @@
 
         android:orientation="horizontal">
 
-        <android.support.v7.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_dialog_address_setting_test"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -40,11 +40,11 @@
             android:text="@string/test"
             android:textColor="@color/common_always_white_text_color" />
 
-        <android.support.v4.widget.Space
+        <androidx.legacy.widget.Space
             android:layout_width="5dp"
             android:layout_height="match_parent" />
 
-        <android.support.v7.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_dialog_address_setting_back"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -53,11 +53,11 @@
             android:text="@string/back"
             android:textColor="@color/common_always_white_text_color" />
 
-        <android.support.v4.widget.Space
+        <androidx.legacy.widget.Space
             android:layout_width="5dp"
             android:layout_height="match_parent" />
 
-        <android.support.v7.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_dialog_address_setting_ok"
             android:layout_width="0dp"
             android:layout_height="match_parent"

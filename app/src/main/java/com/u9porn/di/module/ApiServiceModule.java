@@ -1,11 +1,11 @@
 package com.u9porn.di.module;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.text.TextUtils;
 
 import com.franmontiel.persistentcookiejar.PersistentCookieJar;
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.u9porn.cookie.RulerCookie;
 import com.u9porn.cookie.SetCookieCache;
 import com.u9porn.cookie.SharedPrefsCookiePersistor;

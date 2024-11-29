@@ -1,6 +1,6 @@
 package com.u9porn.ui.porn9video.user;
 
-import android.arch.lifecycle.Lifecycle;
+import androidx.lifecycle.Lifecycle;
 import android.graphics.Bitmap;
 
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;

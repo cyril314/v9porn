@@ -1,19 +1,14 @@
 package com.u9porn.ui.porn9video.play;
 
 import android.annotation.SuppressLint;
-import android.arch.lifecycle.Lifecycle;
-import android.content.Context;
+import androidx.lifecycle.Lifecycle;
 import android.text.TextUtils;
-import android.webkit.CookieManager;
-import android.webkit.CookieSyncManager;
 import android.webkit.WebView;
 
-import butterknife.BindView;
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.trello.rxlifecycle2.LifecycleProvider;
-import com.u9porn.R;
 import com.u9porn.data.DataManager;
 import com.u9porn.data.db.entity.V9PornItem;
 import com.u9porn.data.db.entity.VideoResult;

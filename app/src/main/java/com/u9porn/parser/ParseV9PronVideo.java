@@ -3,7 +3,7 @@ package com.u9porn.parser;
 import android.text.TextUtils;
 import android.util.Base64;
 
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.u9porn.data.db.entity.V9PornItem;
 import com.u9porn.data.db.entity.VideoResult;
 import com.u9porn.data.model.BaseResult;
@@ -59,12 +59,12 @@ public class ParseV9PronVideo {
             // 视频缩略图
             String imgUrl = element.select("img[class=img-responsive]").first().attr("src");
             v9PornItem.setImgUrl(imgUrl);
-	        Logger.d("title: %s ,duration: %s ,img: %s", title, duration, imgUrl);
+            Logger.t(TAG).d("title: %s ,duration: %s ,img: %s", title, duration, imgUrl);
             // 视频页面
             String contentUrl = element.select("a").first().attr("href");
             String viewKey = contentUrl.substring(contentUrl.indexOf("=") + 1,contentUrl.indexOf("&"));
             v9PornItem.setViewKey(viewKey);
-            Logger.d(viewKey);
+            Logger.t(TAG).d(viewKey);
 
             String allInfo = element.text();
             int start = allInfo.indexOf("添加时间");
@@ -228,7 +228,7 @@ public class ParseV9PronVideo {
     public static VideoResult parseVideoPlayUrl(String html, User user) {
         VideoResult videoResult = new VideoResult();
         if (html.contains("你每天只可观看10个视频")) {
-            Logger.d("已经超出观看上限了");
+            Logger.t(TAG).d("已经超出观看上限了");
             //设置标志位,用于上传日志
             videoResult.setId(VideoResult.OUT_OF_WATCH_TIMES);
             return videoResult;
@@ -431,7 +431,7 @@ public class ParseV9PronVideo {
             String ppp=a.select("a").get(0).text();
             if (TextUtils.isDigitsOnly(ppp)) {
                 totalPage = Integer.parseInt(ppp);
-                Logger.d("总页数：" + totalPage);
+                Logger.t(TAG).d("总页数：" + totalPage);
             }
         }
         BaseResult<List<V9PornItem>> baseResult = new BaseResult<>();

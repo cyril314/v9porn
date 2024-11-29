@@ -1,8 +1,8 @@
 package com.u9porn;
 
 import android.content.Context;
-import android.support.multidex.MultiDex;
-import android.support.v7.app.AppCompatDelegate;
+import androidx.multidex.MultiDex;
+import androidx.appcompat.app.AppCompatDelegate;
 import android.webkit.WebView;
 import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
 import com.helper.loadviewhelper.load.LoadViewHelper;
@@ -12,7 +12,6 @@ import com.u9porn.data.DataManager;
 import com.u9porn.di.component.DaggerAppComponent;
 import com.u9porn.eventbus.LowMemoryEvent;
 import com.u9porn.utils.AddressHelper;
-import com.u9porn.utils.AppLogger;
 import dagger.android.AndroidInjector;
 import dagger.android.support.DaggerApplication;
 import org.greenrobot.eventbus.EventBus;
@@ -40,7 +39,6 @@ public class MyApplication extends DaggerApplication {
 		super.onCreate();
 		myApplication = this;
 		initNightMode();
-		AppLogger.initLogger();
 		initLeakCanary();
 		initLoadingHelper();
 		initFileDownload();

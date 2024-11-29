@@ -1,9 +1,9 @@
 package com.u9porn.adapter;
 
 import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.view.PagerAdapter;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.viewpager.widget.PagerAdapter;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +21,7 @@ import com.bumptech.glide.request.target.Target;
 import com.u9porn.data.network.Api;
 import com.u9porn.utils.AgentUtil;
 import com.github.chrisbanes.photoview.PhotoView;
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.u9porn.R;
 import com.u9porn.utils.GlideApp;
 

@@ -1,7 +1,7 @@
 package com.u9porn.utils;
 
 import android.content.Context;
-import android.support.v7.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;

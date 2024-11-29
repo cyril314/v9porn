@@ -1,11 +1,11 @@
 package com.u9porn.ui.google;
 
-import android.arch.lifecycle.Lifecycle;
+import androidx.lifecycle.Lifecycle;
 import android.text.TextUtils;
 import android.util.Log;
 
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.trello.rxlifecycle2.LifecycleProvider;
 import com.u9porn.data.DataManager;
 import com.u9porn.rxjava.CallBackWrapper;

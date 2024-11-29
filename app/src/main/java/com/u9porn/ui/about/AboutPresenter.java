@@ -1,11 +1,12 @@
 package com.u9porn.ui.about;
 
-import android.arch.lifecycle.Lifecycle;
+import androidx.lifecycle.Lifecycle;
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
-import com.orhanobut.logger.Logger;
+import com.u9porn.di.module.ApplicationModule;
+import com.u9porn.utils.Logger;
 import com.trello.rxlifecycle2.LifecycleProvider;
 import com.u9porn.data.DataManager;
 import com.u9porn.data.model.UpdateVersion;
@@ -36,6 +37,9 @@ import io.reactivex.schedulers.Schedulers;
  */
 
 public class AboutPresenter extends MvpBasePresenter<AboutView> implements IAbout {
+
+    private static final String TAG = AboutPresenter.class.getSimpleName();
+
     private UpdatePresenter updatePresenter;
     private LifecycleProvider<Lifecycle.Event> provider;
     private Context context;
@@ -91,27 +95,27 @@ public class AboutPresenter extends MvpBasePresenter<AboutView> implements IAbou
     @Override
     public void cleanCacheFile(final List<File> fileDirList) {
         Observable.create(new ObservableOnSubscribe<Boolean>() {
-            @Override
-            public void subscribe(ObservableEmitter<Boolean> emitter) throws Exception {
-                boolean result = true;
-                for (File fileDir : fileDirList) {
-                    if (fileDir.getAbsolutePath().contains("glide")) {
-                        Logger.d("开始清图片缓存");
-                        GlideApp.get(context).clearDiskCache();
-                        result = true;
-                        break;
-                    } else {
-                        result = AppCacheUtils.cleanCacheFile(fileDir);
+                    @Override
+                    public void subscribe(ObservableEmitter<Boolean> emitter) throws Exception {
+                        boolean result = true;
+                        for (File fileDir : fileDirList) {
+                            if (fileDir.getAbsolutePath().contains("glide")) {
+                                Logger.t(TAG).d("开始清图片缓存");
+                                GlideApp.get(context).clearDiskCache();
+                                result = true;
+                                break;
+                            } else {
+                                result = AppCacheUtils.cleanCacheFile(fileDir);
+                            }
+                        }
+                        if (result) {
+                            emitter.onNext(true);
+                            emitter.onComplete();
+                        } else {
+                            emitter.onError(new Throwable("clean cache file failure"));
+                        }
                     }
-                }
-                if (result) {
-                    emitter.onNext(true);
-                    emitter.onComplete();
-                } else {
-                    emitter.onError(new Throwable("clean cache file failure"));
-                }
-            }
-        })
+                })
                 .subscribeOn(Schedulers.io())
                 .delay(1, TimeUnit.SECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -153,11 +157,11 @@ public class AboutPresenter extends MvpBasePresenter<AboutView> implements IAbou
     @Override
     public void countCacheFileSize(final String title) {
         Observable.fromCallable(new Callable<String>() {
-            @Override
-            public String call() throws Exception {
-                return getCleanCacheTitle(context, title);
-            }
-        }).subscribeOn(Schedulers.io())
+                    @Override
+                    public String call() throws Exception {
+                        return getCleanCacheTitle(context, title);
+                    }
+                }).subscribeOn(Schedulers.io())
                 .delay(500, TimeUnit.MILLISECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
                 .compose(provider.<String>bindUntilEvent(Lifecycle.Event.ON_DESTROY))

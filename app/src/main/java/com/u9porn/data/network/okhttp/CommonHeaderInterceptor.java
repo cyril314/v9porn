@@ -1,10 +1,10 @@
 package com.u9porn.data.network.okhttp;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.text.TextUtils;
 
 import com.u9porn.utils.AgentUtil;
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.u9porn.data.network.Api;
 import com.u9porn.data.prefs.PreferencesHelper;
 import com.u9porn.eventbus.UrlRedirectEvent;

@@ -1,10 +1,10 @@
 package com.u9porn.ui.pxgav;
 
-import android.arch.lifecycle.Lifecycle;
-import android.support.annotation.NonNull;
+import androidx.lifecycle.Lifecycle;
+import androidx.annotation.NonNull;
 import android.text.TextUtils;
 
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.trello.rxlifecycle2.LifecycleProvider;
 import com.u9porn.data.DataManager;
 import com.u9porn.data.model.pxgav.PxgavResultWithBlockId;

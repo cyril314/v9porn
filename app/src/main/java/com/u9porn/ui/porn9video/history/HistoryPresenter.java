@@ -1,7 +1,7 @@
 package com.u9porn.ui.porn9video.history;
 
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.u9porn.data.DataManager;
 import com.u9porn.data.db.entity.V9PornItem;
 

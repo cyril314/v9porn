@@ -1,8 +1,8 @@
 package com.u9porn.ui.porn9video.play;
 
-import android.arch.lifecycle.Lifecycle;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.lifecycle.Lifecycle;
+import androidx.fragment.app.FragmentManager;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.trello.lifecycle2.android.lifecycle.AndroidLifecycle;
 import com.trello.rxlifecycle2.LifecycleProvider;

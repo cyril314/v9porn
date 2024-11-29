@@ -3,14 +3,14 @@ package com.u9porn.ui;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.ColorInt;
-import android.support.annotation.IntRange;
-import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-
+import androidx.annotation.ColorInt;
+import androidx.annotation.IntRange;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
 import com.jaeger.library.StatusBarUtil;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.u9porn.R;
@@ -19,13 +19,10 @@ import com.u9porn.data.db.entity.V9PornItem;
 import com.u9porn.eventbus.NeedCheckGoogleRecaptchaEvent;
 import com.u9porn.ui.google.GoogleRecaptchaVerifyActivity;
 import com.u9porn.utils.PlaybackEngine;
-
+import dagger.android.support.DaggerAppCompatActivity;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
-
-import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
-import dagger.android.support.DaggerAppCompatActivity;
 
 /**
  * @author flymegoc

@@ -6,7 +6,7 @@
     android:padding="2dp"
     android:orientation="vertical">
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_item_video_comment_title_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
         android:textColor="@color/item_v9porn_comment_message_text_color"
         android:text="在广州也能遇到这样的就好了 "
         />
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_item_video_comment_replytime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

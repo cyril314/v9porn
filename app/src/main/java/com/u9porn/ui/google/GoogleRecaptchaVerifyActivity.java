@@ -3,19 +3,19 @@ package com.u9porn.ui.google;
 import android.net.http.SslError;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
-import android.support.multidex.BuildConfig;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.multidex.BuildConfig;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.webkit.*;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.u9porn.R;
 import com.u9porn.ui.MvpActivity;
@@ -239,7 +239,6 @@ public class GoogleRecaptchaVerifyActivity extends MvpActivity<GoogleRecaptchaVe
                     String postData = value.replace("\"", "");
                     Logger.t(TAG).d(postData);
                     String[] data = postData.split(",");
-                    Logger.t(TAG).d(data);
                     if (data.length >= 4) {
                         doPost(data[0], data[1], data[2], data[3]);
                     } else {

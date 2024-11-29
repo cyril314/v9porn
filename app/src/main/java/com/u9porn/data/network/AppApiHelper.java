@@ -6,7 +6,7 @@ import android.text.TextUtils;
 import android.webkit.JavascriptInterface;
 
 import com.google.gson.Gson;
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.u9porn.constants.Constants;
 import com.u9porn.data.cache.CacheProviders;
 import com.u9porn.data.db.entity.V9PornItem;

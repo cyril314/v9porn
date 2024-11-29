@@ -4,7 +4,7 @@ import android.net.ParseException;
 
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonSerializer;
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.u9porn.BuildConfig;
 import com.u9porn.eventbus.NeedCheckGoogleRecaptchaEvent;
 

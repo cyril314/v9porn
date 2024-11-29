@@ -1,6 +1,6 @@
 package com.u9porn.adapter;
 
-import android.support.v7.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatImageView;
 
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.chad.library.adapter.base.BaseQuickAdapter;

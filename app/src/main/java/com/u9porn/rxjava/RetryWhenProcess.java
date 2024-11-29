@@ -1,6 +1,6 @@
 package com.u9porn.rxjava;
 
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 
 import java.net.SocketTimeoutException;
 import java.util.concurrent.TimeUnit;

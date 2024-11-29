@@ -4,7 +4,7 @@ import com.liulishuo.filedownloader.BaseDownloadTask;
 import com.liulishuo.filedownloader.FileDownloadListener;
 import com.liulishuo.filedownloader.FileDownloader;
 import com.liulishuo.filedownloader.model.FileDownloadStatus;
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.u9porn.BuildConfig;
 import com.u9porn.MyApplication;
 import com.u9porn.data.DataManager;
@@ -103,7 +103,7 @@ public class DownloadManager {
         @Override
         protected void completed(BaseDownloadTask task) {
             Logger.t(TAG).d("completed:" + "--status:" + task.getStatus() + "--:soFarBytes：" + task.getSmallFileSoFarBytes() + "--:totalBytes：" + task.getSmallFileTotalBytes());
-            Logger.d("completed");
+            Logger.t(TAG).d("completed");
             saveDownloadInfo(task);
         }
 

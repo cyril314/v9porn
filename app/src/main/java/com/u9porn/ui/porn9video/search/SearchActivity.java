@@ -1,10 +1,10 @@
 package com.u9porn.ui.porn9video.search;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,7 +24,6 @@ import com.u9porn.utils.LoadHelperUtils;
 import org.angmarch.views.NiceSpinner;
 import org.angmarch.views.NiceSpinnerAdapter;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -43,7 +42,7 @@ public class SearchActivity extends MvpActivity<SearchView, SearchPresenter> imp
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.search_view)
-    android.support.v7.widget.SearchView searchView;
+    androidx.appcompat.widget.SearchView searchView;
     @BindView(R.id.nice_spinner_search)
     NiceSpinner niceSpinnerSearch;
     @BindView(R.id.nice_spinner_sort_by)
@@ -125,7 +124,7 @@ public class SearchActivity extends MvpActivity<SearchView, SearchPresenter> imp
     }
 
     private void setListener() {
-        searchView.setOnQueryTextListener(new android.support.v7.widget.SearchView.OnQueryTextListener() {
+        searchView.setOnQueryTextListener(new androidx.appcompat.widget.SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 if (query.equals(searchId)) {
@@ -141,7 +140,7 @@ public class SearchActivity extends MvpActivity<SearchView, SearchPresenter> imp
                 return false;
             }
         });
-        searchView.setOnCloseListener(new android.support.v7.widget.SearchView.OnCloseListener() {
+        searchView.setOnCloseListener(new androidx.appcompat.widget.SearchView.OnCloseListener() {
             @Override
             public boolean onClose() {
                 return true;

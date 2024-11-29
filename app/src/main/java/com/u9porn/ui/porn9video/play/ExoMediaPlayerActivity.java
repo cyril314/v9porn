@@ -10,7 +10,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.devbrackets.android.exomedia.listener.OnPreparedListener;
 import com.flymegoc.exolibrary.widget.ExoVideoControlsMobile;
 import com.flymegoc.exolibrary.widget.ExoVideoView;
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.u9porn.R;
 import com.u9porn.utils.GlideApp;
 

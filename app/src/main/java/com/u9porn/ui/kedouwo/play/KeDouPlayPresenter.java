@@ -1,6 +1,6 @@
 package com.u9porn.ui.kedouwo.play;
 
-import android.arch.lifecycle.Lifecycle;
+import androidx.lifecycle.Lifecycle;
 import android.text.TextUtils;
 
 import com.trello.rxlifecycle2.LifecycleProvider;

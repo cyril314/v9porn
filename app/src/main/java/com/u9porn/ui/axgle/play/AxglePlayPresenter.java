@@ -1,8 +1,8 @@
 package com.u9porn.ui.axgle.play;
 
-import android.arch.lifecycle.Lifecycle;
+import androidx.lifecycle.Lifecycle;
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.u9porn.ui.axgle.PSVS21;
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;

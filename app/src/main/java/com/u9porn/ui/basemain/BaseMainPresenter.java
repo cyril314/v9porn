@@ -1,6 +1,6 @@
 package com.u9porn.ui.basemain;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
 import com.u9porn.data.DataManager;

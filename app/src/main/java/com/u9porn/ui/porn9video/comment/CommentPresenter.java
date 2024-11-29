@@ -1,14 +1,13 @@
 package com.u9porn.ui.porn9video.comment;
 
-import android.arch.lifecycle.Lifecycle;
-import android.support.annotation.NonNull;
+import androidx.lifecycle.Lifecycle;
+import androidx.annotation.NonNull;
 
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.trello.rxlifecycle2.LifecycleProvider;
 import com.u9porn.data.DataManager;
 import com.u9porn.data.model.VideoComment;
-import com.u9porn.di.PerActivity;
 import com.u9porn.rxjava.CallBackWrapper;
 import com.u9porn.rxjava.RetryWhenProcess;
 import com.u9porn.rxjava.RxSchedulersHelper;

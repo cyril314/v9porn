@@ -10,13 +10,13 @@
     <include layout="@layout/layout_toolbar" />
 
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_refresh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="开始验证" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_clean"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

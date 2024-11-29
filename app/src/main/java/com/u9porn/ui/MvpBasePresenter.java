@@ -16,9 +16,9 @@
 
 package com.u9porn.ui;
 
-import android.arch.lifecycle.Lifecycle;
-import android.support.annotation.NonNull;
-import android.support.annotation.UiThread;
+import androidx.lifecycle.Lifecycle;
+import androidx.annotation.NonNull;
+import androidx.annotation.UiThread;
 
 import com.hannesdorfmann.mosby3.mvp.MvpPresenter;
 import com.hannesdorfmann.mosby3.mvp.MvpView;

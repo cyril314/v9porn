@@ -2,7 +2,7 @@ package com.u9porn.parser;
 
 import android.text.TextUtils;
 
-import com.orhanobut.logger.Logger;
+import com.u9porn.utils.Logger;
 import com.u9porn.data.model.BaseResult;
 import com.u9porn.data.model.MeiZiTu;
 
