@@ -47,7 +47,7 @@ import java.lang.ref.WeakReference;
  * </p>
  *
  * @param <V> type of the {@link MvpView}
- * @author Hannes Dorfmann
+ * @author
  * @since 1.0.0
  */
 public class MvpBasePresenter<V extends MvpView> extends BasePresenter implements MvpPresenter<V> {

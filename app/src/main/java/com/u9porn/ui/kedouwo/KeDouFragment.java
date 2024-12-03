@@ -31,7 +31,7 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
- * Created by alex
+ * @author
  * Des:
  * Date: 2019/8/27.
  */

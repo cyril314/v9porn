@@ -609,21 +609,6 @@ public class AppDataManager implements DataManager {
 	}
 
 	@Override
-	public Observable<List<KeDouModel>> videoListLatest(int page) {
-		return mApiHelper.videoListLatest(page);
-	}
-
-	@Override
-	public Observable<List<KeDouModel>> videoListTop(int page) {
-		return mApiHelper.videoListTop(page);
-	}
-
-	@Override
-	public Observable<List<KeDouModel>> videoListPopular(int page) {
-		return mApiHelper.videoListPopular(page);
-	}
-
-	@Override
 	public Observable<KeDouRelated> videoRelated(String url) {
 		return mApiHelper.videoRelated(url);
 	}

@@ -26,11 +26,13 @@ public class ParseKeDouWo {
 
     public static List<KeDouModel> parseVideoList(String html) {
         Document document = Jsoup.parse(html);
-//        Elements recentItems = shareDoc.select("#list_videos_most_recent_videos_items").select(".item");
-//        Elements recentItems = document.select("#list_videos_latest_videos_list_items").select(".item");
-//        Elements recentItems = document.select("#list_videos_common_videos_list_items").select(".item");
         Elements recentItems = document.select("div.list-videos").first().select(".item");
         return parseList(recentItems);
+    }
+
+    private static Matcher getInfo(String reg, String info) {
+        Pattern p = Pattern.compile(reg);
+        return p.matcher(info);
     }
 
     public static KeDouRelated parseVideoDetail(String html) {
@@ -45,21 +47,21 @@ public class ParseKeDouWo {
         String data = first.data();
 
 //        final String reg = "(video_url+):\\s?(.+)(.mp4/)";
-        final String reg = "(video_url+):\\s?(.+)(\\?br=\\d+)";
-        Pattern p = Pattern.compile(reg);
-        Matcher m = p.matcher(data);
+        final String reg = "(video_url):\\s?'(.+?)'";
+        Matcher m = getInfo(reg, data);
         if (m.find()) {
-            String group = m.group();
-//            String videoUrl = group.substring(group.indexOf("'")+1,group.lastIndexOf("/"));
-            String videoUrl = group.substring(group.indexOf("'") + 1);
+            String videoUrl = m.group();
             Logger.t(TAG).d("videoUrl: " + videoUrl);
-            keDouRelated.setVideoUrl(videoUrl);
         }
         //从下载解析
         String videoUrl = document.select("div.info").last().getElementsByClass("item").last().select("a").attr("href");
         Logger.t(TAG).d("videoUrl: " + videoUrl);
-
-        keDouRelated.setVideoUrl(videoUrl);
+        Matcher v = getInfo("http.*?\\.mp4", videoUrl);
+        if (v.find()) {
+            String vrl = v.group();
+            Logger.t(TAG).d("videoUrl: " + vrl);
+            keDouRelated.setVideoUrl(vrl);
+        }
 
         Elements relatedList = document.select("#list_videos_related_videos_items").first().select(".item");
         List<KeDouModel> keDouModels = parseList(relatedList);

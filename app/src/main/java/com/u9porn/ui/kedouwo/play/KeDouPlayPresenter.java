@@ -16,7 +16,7 @@ import javax.inject.Inject;
 import io.reactivex.disposables.Disposable;
 
 /**
- * Created by alex
+ * @author
  * Des:
  * Date: 2019/8/28.
  */

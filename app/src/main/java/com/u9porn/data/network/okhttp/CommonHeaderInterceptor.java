@@ -27,7 +27,6 @@ import okhttp3.Response;
  * @author
  * @date 2018/1/17
  */
-
 @Singleton
 public class CommonHeaderInterceptor implements Interceptor {
 
@@ -45,7 +44,6 @@ public class CommonHeaderInterceptor implements Interceptor {
         //统一设置请求头
         Request original = chain.request();
         String header = original.header("Domain-Name");
-
         //如果是可能被重定向的header
         if (!TextUtils.isEmpty(header) && Objects.equals(header, Api.PORN9_VIDEO_DOMAIN_NAME)) {
             //返回的地址

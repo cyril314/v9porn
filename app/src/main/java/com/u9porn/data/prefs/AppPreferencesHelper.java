@@ -335,7 +335,7 @@ public class AppPreferencesHelper implements PreferencesHelper {
      */
     @Override
     public String getKeDouWoAddress() {
-        return mPrefs.getString(KEY_SP_KE_DOU_WO_ADDRESS, "http://www.xiaobi085.com/");
+        return mPrefs.getString(KEY_SP_KE_DOU_WO_ADDRESS, "https://www.xiaobi085.com/");
     }
 
     @Override

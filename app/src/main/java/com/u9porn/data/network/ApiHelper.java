@@ -132,12 +132,6 @@ public interface ApiHelper {
 
     Observable<List<KeDouModel>> videoList(String category,int page,boolean pullToRefresh);
 
-    Observable<List<KeDouModel>> videoListLatest(int page);
-
-    Observable<List<KeDouModel>> videoListTop(int page);
-
-    Observable<List<KeDouModel>> videoListPopular(int page);
-
     Observable<KeDouRelated> videoRelated(String url);
 
     Observable<String> getRealVideoUrl(String url);

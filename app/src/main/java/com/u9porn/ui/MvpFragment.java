@@ -32,7 +32,7 @@ import com.hannesdorfmann.mosby3.mvp.delegate.MvpDelegateCallback;
  * A Fragment that uses a {@link MvpPresenter} to implement a Model-View-Presenter
  * architecture
  *
- * @author Hannes Dorfmann
+ * @author
  * @since 1.0.0
  */
 public abstract class MvpFragment<V extends MvpView, P extends MvpPresenter<V>> extends BaseFragment

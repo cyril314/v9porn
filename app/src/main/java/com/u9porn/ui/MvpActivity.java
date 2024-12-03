@@ -34,7 +34,7 @@ import com.hannesdorfmann.mosby3.mvp.delegate.ActivityMvpDelegateImpl;
  * An Activity that uses a {@link MvpPresenter} to implement a Model-View-Presenter
  * architecture.
  *
- * @author Hannes Dorfmann
+ * @author
  * @since 1.0.0
  */
 public abstract class MvpActivity<V extends MvpView, P extends MvpPresenter<V>>

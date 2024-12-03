@@ -42,8 +42,7 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
- * Created by alex
- * Des:
+ * @author Des:
  * Date: 2019/8/28.
  */
 public class KeDouPlayActivity extends MvpActivity<KeDouPlayView, KeDouPlayPresenter> implements KeDouPlayView, OnPreparedListener {
@@ -51,29 +50,29 @@ public class KeDouPlayActivity extends MvpActivity<KeDouPlayView, KeDouPlayPrese
     @BindView(R.id.video_view)
     ExoVideoView mVideoView;
     @BindView(R.id.fr_container)
-    FrameLayout  mFrContainer;
+    FrameLayout mFrContainer;
     @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
     @BindView(R.id.tv_play_video_title)
-    TextView             mTvPlayVideoTitle;
+    TextView mTvPlayVideoTitle;
     @BindView(R.id.tv_play_video_author_)
-    TextView             mTvPlayVideoAuthor;
+    TextView mTvPlayVideoAuthor;
     @BindView(R.id.tv_play_video_add_date)
-    AppCompatTextView    mTvPlayVideoAddDate;
+    AppCompatTextView mTvPlayVideoAddDate;
     @BindView(R.id.tv_play_video_info)
-    AppCompatTextView    mTvPlayVideoInfo;
+    AppCompatTextView mTvPlayVideoInfo;
     @BindView(R.id.floatingToolbar)
-    FloatingToolbar      mFloatingToolbar;
+    FloatingToolbar mFloatingToolbar;
     @BindView(R.id.fab)
     FloatingActionButton mFab;
     @Inject
     protected KeDouPlayPresenter mKeDouPlayPresenter;
-    private KeDouAdapter           mKeDouAdapter;
-    private KeDouModel             mKeDouModel;
-    private AlertDialog            mAlertDialog;
+    private KeDouAdapter mKeDouAdapter;
+    private KeDouModel mKeDouModel;
+    private AlertDialog mAlertDialog;
     private ExoVideoControlsMobile mExoVideoControlsMobile;
-    private Unbinder               mUnbinder;
-    private boolean                isPauseByActivityEvent;
+    private Unbinder mUnbinder;
+    private boolean isPauseByActivityEvent;
     private LoadViewHelper mHelper;
     private int retryCount = 0;
 
@@ -95,7 +94,7 @@ public class KeDouPlayActivity extends MvpActivity<KeDouPlayView, KeDouPlayPrese
         initBottomMenu();
     }
 
-    private void  initData() {
+    private void initData() {
         playVideo();
     }
 
@@ -129,7 +128,6 @@ public class KeDouPlayActivity extends MvpActivity<KeDouPlayView, KeDouPlayPrese
 
             @Override
             public void onItemLongClick(MenuItem item) {
-
             }
         });
     }
@@ -148,7 +146,6 @@ public class KeDouPlayActivity extends MvpActivity<KeDouPlayView, KeDouPlayPrese
         mVideoView.pause();
         isPauseByActivityEvent = true;
         super.onPause();
-
     }
 
     @Override
@@ -245,7 +242,7 @@ public class KeDouPlayActivity extends MvpActivity<KeDouPlayView, KeDouPlayPrese
             return;
         String videoUrl = keDouRelated.getVideoUrl();
         if (TextUtils.isEmpty(videoUrl)) {
-            showMessage("解析视频地址失败",TastyToast.ERROR);
+            showMessage("解析视频地址失败", TastyToast.ERROR);
             if (keDouRelated.isOutOfWatch() && retryCount < 1) {
                 //超出观看限制，再试一次
                 retryCount++;
