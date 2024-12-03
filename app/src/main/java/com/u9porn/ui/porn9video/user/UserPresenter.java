@@ -17,7 +17,7 @@ import io.reactivex.disposables.Disposable;
 /**
  * 用户登录
  *
- * @author flymegoc
+ * @author
  * @date 2017/12/10
  */
 

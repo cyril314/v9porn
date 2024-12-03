@@ -15,7 +15,7 @@ import retrofit2.http.Query;
 import retrofit2.http.Url;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2017/11/14
  * @describe
  */

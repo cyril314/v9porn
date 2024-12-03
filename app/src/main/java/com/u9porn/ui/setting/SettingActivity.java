@@ -42,7 +42,7 @@ import me.jessyan.retrofiturlmanager.RetrofitUrlManager;
 import okhttp3.HttpUrl;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class SettingActivity extends MvpActivity<SettingView, SettingPresenter> implements View.OnClickListener, SettingView {
 

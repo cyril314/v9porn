@@ -36,7 +36,7 @@ import butterknife.Unbinder;
 /**
  * A simple {@link Fragment} subclass.
  *
- * @author flymegoc
+ * @author
  */
 public class MeiZiTuFragment extends MvpFragment<MeiZiTuView, MeiZiTuPresenter> implements MeiZiTuView, SwipeRefreshLayout.OnRefreshListener {
 

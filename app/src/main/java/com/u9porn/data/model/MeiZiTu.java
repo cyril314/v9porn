@@ -3,7 +3,7 @@ package com.u9porn.data.model;
 import java.io.Serializable;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/1/25
  */
 

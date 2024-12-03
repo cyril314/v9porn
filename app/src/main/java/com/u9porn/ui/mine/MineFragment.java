@@ -50,7 +50,7 @@ import static android.app.Activity.RESULT_OK;
 /**
  * A simple {@link Fragment} subclass.
  *
- * @author flymegoc
+ * @author
  */
 public class MineFragment extends MvpFragment<MineView, MinePresenter> implements View.OnClickListener {
 

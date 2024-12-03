@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.TextView;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2017/12/27
  */
 

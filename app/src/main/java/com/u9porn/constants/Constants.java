@@ -3,7 +3,7 @@ package com.u9porn.constants;
 /**
  * 常量
  *
- * @author flymegoc
+ * @author
  * @date 2017/11/19
  * @describe
  */

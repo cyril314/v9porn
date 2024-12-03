@@ -25,7 +25,7 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2017/11/20
  * @describe
  */

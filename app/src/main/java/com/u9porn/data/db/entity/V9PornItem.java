@@ -19,7 +19,7 @@ import java.util.Date;
 /**
  * 视频
  *
- * @author flymegoc
+ * @author
  * @date 2017/11/14
  * @describe
  */

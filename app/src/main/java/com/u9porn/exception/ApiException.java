@@ -22,7 +22,7 @@ import io.rx_cache2.RxCacheException;
 import retrofit2.HttpException;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2017/12/26
  */
 

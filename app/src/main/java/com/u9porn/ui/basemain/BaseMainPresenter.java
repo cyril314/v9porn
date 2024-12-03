@@ -11,7 +11,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/1/25
  */
 public class BaseMainPresenter extends MvpBasePresenter<BaseMainView> implements IBaseMain {

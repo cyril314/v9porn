@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * 版本升级
  *
- * @author flymegoc
+ * @author
  * @date 2017/12/22
  */
 

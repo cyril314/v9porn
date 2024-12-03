@@ -24,7 +24,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/1/17
  */
 

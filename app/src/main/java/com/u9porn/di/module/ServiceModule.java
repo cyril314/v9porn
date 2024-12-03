@@ -5,7 +5,7 @@ import android.app.Service;
 import dagger.Module;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/2/4
  */
 @Module

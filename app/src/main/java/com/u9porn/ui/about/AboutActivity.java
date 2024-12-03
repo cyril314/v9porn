@@ -50,7 +50,7 @@ import de.greenrobot.common.io.FileUtils;
 import ru.noties.markwon.Markwon;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class AboutActivity extends MvpActivity<AboutView, AboutPresenter> implements AboutView {
 

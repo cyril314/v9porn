@@ -3,7 +3,7 @@ package com.u9porn.data.model;
 import java.util.List;
 
 /**论坛帖子
- * @author flymegoc
+ * @author
  * @date 2018/1/24
  */
 

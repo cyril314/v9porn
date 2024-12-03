@@ -29,7 +29,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class AuthorActivity extends MvpActivity<AuthorView, AuthorPresenter> implements AuthorView {
 

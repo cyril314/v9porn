@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * 类别
  *
- * @author flymegoc
+ * @author
  * @date 2018/1/19
  */
 @Entity

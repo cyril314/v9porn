@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  *
- * @author flymegoc
+ * @author
  * @date 2018/1/31
  */
 

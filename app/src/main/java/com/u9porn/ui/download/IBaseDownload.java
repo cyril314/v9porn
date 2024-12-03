@@ -4,7 +4,7 @@ import com.u9porn.data.db.entity.V9PornItem;
 import com.u9porn.ui.porn9video.favorite.IBaseFavorite;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2017/11/26
  * @describe
  */

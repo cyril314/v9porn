@@ -12,7 +12,7 @@ import javax.inject.Inject;
 /**
  * 浏览历史，只有观看视频，并解析出视频地址保存之后才会被记录
  *
- * @author flymegoc
+ * @author
  * @date 2017/12/22
  */
 

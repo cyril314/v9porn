@@ -10,7 +10,7 @@ import com.u9porn.ui.update.UpdatePresenter;
 import javax.inject.Inject;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2017/12/23
  */
 public class MainPresenter extends MvpBasePresenter<MainView> implements IMain {

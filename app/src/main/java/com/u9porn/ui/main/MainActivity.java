@@ -73,7 +73,7 @@ import butterknife.ButterKnife;
 import static com.u9porn.utils.Tags.DOU_BAN;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class MainActivity extends MvpActivity<MainView, MainPresenter> implements MainView {
 

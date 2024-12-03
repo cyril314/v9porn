@@ -24,7 +24,7 @@ import io.reactivex.schedulers.Schedulers;
 import okhttp3.Cookie;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/3/5
  */
 @Singleton

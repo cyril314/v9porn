@@ -11,7 +11,7 @@ import cn.jzvd.JZVideoPlayer;
 import cn.jzvd.JZVideoPlayerStandard;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class JiaoZiVideoPlayerActivity extends BasePlayVideo {
 

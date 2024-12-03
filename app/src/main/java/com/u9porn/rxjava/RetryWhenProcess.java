@@ -15,7 +15,7 @@ import io.reactivex.functions.Function;
  * 超时重试，因为网站的原因，okhttp自带的超时重试貌似没啥效果，只能通过外面重试
  * rxjava2
  *
- * @author flymegoc
+ * @author
  * @date 2018/1/13
  */
 

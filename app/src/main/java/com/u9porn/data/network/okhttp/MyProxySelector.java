@@ -17,7 +17,7 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/2/10
  */
 @Singleton

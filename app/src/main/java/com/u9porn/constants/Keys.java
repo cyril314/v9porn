@@ -1,7 +1,7 @@
 package com.u9porn.constants;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2017/11/19
  * @describe
  */

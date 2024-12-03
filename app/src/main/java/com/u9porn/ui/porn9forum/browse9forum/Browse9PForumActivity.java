@@ -40,7 +40,7 @@ import butterknife.ButterKnife;
 import cn.pedant.SafeWebViewBridge.InjectedChromeClient;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class Browse9PForumActivity extends MvpActivity<Browse9View, Browse9Presenter> implements Browse9View, SwipeRefreshLayout.OnRefreshListener {
 

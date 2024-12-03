@@ -19,7 +19,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/1/25
  */
 

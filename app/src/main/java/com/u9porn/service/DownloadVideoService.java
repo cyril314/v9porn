@@ -24,7 +24,7 @@ import javax.inject.Inject;
 import dagger.android.DaggerService;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class DownloadVideoService extends DaggerService implements DownloadManager.DownloadStatusUpdater {
 

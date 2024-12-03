@@ -15,7 +15,7 @@ import com.u9porn.R;
 import com.u9porn.utils.GlideApp;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class ExoMediaPlayerActivity extends BasePlayVideo implements OnPreparedListener {
 

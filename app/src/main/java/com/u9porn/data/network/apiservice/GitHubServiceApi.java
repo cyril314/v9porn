@@ -5,7 +5,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Url;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/1/17
  */
 

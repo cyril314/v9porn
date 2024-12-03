@@ -22,7 +22,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class HistoryActivity extends MvpActivity<HistoryView, HistoryPresenter> implements HistoryView {
 

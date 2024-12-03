@@ -15,7 +15,7 @@ import com.u9porn.ui.BaseFragment;
 /**
  * A simple {@link Fragment} subclass.
  *
- * @author flymegoc
+ * @author
  */
 public class MusicFragment extends BaseFragment {
 

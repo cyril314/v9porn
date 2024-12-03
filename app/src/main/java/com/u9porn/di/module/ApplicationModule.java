@@ -47,7 +47,7 @@ import io.rx_cache2.internal.RxCache;
 import io.victoralbertos.jolyglot.GsonSpeaker;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/2/4
  */
 @Module

@@ -2,7 +2,7 @@ package com.u9porn.ui.update;
 
 /**
  *
- * @author flymegoc
+ * @author
  * @date 2017/12/23
  */
 

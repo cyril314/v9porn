@@ -1,7 +1,7 @@
 package com.u9porn.ui.porn9video.favorite;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2017/11/27
  * @describe
  */

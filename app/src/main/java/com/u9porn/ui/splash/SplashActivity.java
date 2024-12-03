@@ -23,7 +23,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class SplashActivity extends MvpActivity<SplashView, SplashPresenter> implements SplashView {
 

@@ -52,7 +52,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * @author flymegoc
+ * @author
  */
 public abstract class BasePlayVideo extends MvpActivity<PlayVideoView, PlayVideoPresenter> implements PlayVideoView {
 

@@ -2,7 +2,7 @@ package com.u9porn.eventbus;
 
 /**
  *
- * @author flymegoc
+ * @author
  * @date 2018/1/22
  */
 

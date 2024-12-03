@@ -11,7 +11,7 @@ import java.io.Serializable;
 /**
  * 视频信息
  *
- * @author flymegoc
+ * @author
  * @date 2017/12/20
  */
 @Entity

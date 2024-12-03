@@ -32,7 +32,7 @@ import butterknife.Unbinder;
 /**
  * A simple {@link Fragment} subclass.
  *
- * @author flymegoc
+ * @author
  */
 public class PxgavFragment extends MvpFragment<PxgavView, PxgavPresenter> implements PxgavView, SwipeRefreshLayout.OnRefreshListener {
 

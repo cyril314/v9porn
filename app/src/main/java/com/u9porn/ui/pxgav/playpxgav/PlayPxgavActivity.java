@@ -39,7 +39,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class PlayPxgavActivity extends MvpActivity<PlayPxgavView, PlayPxgavPresenter> implements PlayPxgavView, OnPreparedListener {
 

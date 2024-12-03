@@ -32,7 +32,7 @@ import java.io.File;
 /**
  * 升级下载apk服务
  *
- * @author flymegoc
+ * @author
  * @date 2017/12/23
  */
 

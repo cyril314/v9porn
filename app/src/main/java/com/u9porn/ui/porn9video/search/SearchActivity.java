@@ -34,7 +34,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class SearchActivity extends MvpActivity<SearchView, SearchPresenter> implements SearchView {
 

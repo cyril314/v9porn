@@ -37,7 +37,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class UserLoginActivity extends MvpActivity<UserView, UserPresenter> implements UserView {
 

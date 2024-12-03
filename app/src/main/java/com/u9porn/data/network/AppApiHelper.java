@@ -54,7 +54,7 @@ import retrofit2.Call;
 import retrofit2.Response;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/3/4
  */
 

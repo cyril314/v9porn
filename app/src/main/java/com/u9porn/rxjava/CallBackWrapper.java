@@ -6,7 +6,7 @@ import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2017/12/1
  */
 

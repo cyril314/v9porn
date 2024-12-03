@@ -13,7 +13,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Url;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/1/30
  */
 

@@ -38,7 +38,7 @@ import butterknife.Unbinder;
 /**
  * A simple {@link Fragment} subclass.
  *
- * @author flymegoc
+ * @author
  */
 public class ForumFragment extends MvpFragment<ForumView, ForumPresenter> implements ForumView, SwipeRefreshLayout.OnRefreshListener {
 

@@ -3,7 +3,7 @@ package com.u9porn.ui.setting;
 import com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/2/6
  */
 

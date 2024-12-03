@@ -30,7 +30,7 @@ import io.reactivex.functions.Predicate;
 import me.jessyan.retrofiturlmanager.RetrofitUrlManager;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/2/6
  */
 

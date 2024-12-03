@@ -6,7 +6,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2017/11/18
  * @describe
  */

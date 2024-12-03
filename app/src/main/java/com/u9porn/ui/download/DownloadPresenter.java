@@ -39,7 +39,7 @@ import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2017/11/27
  * @describe
  */

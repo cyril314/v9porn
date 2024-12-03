@@ -13,7 +13,7 @@ import com.u9porn.rxjava.RxSchedulersHelper;
 import javax.inject.Inject;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/1/26
  */
 public class NoticePresenter extends MvpBasePresenter<NoticeView> implements INotice {

@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/1/27
  */
 

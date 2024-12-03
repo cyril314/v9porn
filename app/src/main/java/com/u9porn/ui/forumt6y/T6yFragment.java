@@ -11,7 +11,7 @@ import com.u9porn.ui.BaseFragment;
 
 /**
  * A simple {@link Fragment} subclass.
- * @author flymegoc
+ * @author
  */
 public class T6yFragment extends BaseFragment {
 

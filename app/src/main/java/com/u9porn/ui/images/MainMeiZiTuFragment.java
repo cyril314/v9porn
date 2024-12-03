@@ -9,7 +9,7 @@ import com.u9porn.ui.basemain.BaseMainFragment;
 /**
  * A simple {@link Fragment} subclass.
  *
- * @author flymegoc
+ * @author
  */
 public class MainMeiZiTuFragment extends BaseMainFragment {
 

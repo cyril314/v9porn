@@ -39,7 +39,7 @@ import butterknife.ButterKnife;
 import de.greenrobot.common.io.FileUtils;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class PictureViewerActivity extends MvpActivity<PictureViewerView, PictureViewerPresenter> implements PictureViewerView {
 	@BindView(R.id.viewPager)

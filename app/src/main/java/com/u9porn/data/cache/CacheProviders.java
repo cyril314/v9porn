@@ -15,7 +15,7 @@ import io.rx_cache2.Reply;
 /**
  * RxJavaCache 缓存
  *
- * @author flymegoc
+ * @author
  * @date 2017/11/18
  */
 public interface CacheProviders {

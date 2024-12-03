@@ -4,7 +4,7 @@ import com.u9porn.data.model.UpdateVersion;
 import com.u9porn.ui.BaseView;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2017/12/22
  */
 

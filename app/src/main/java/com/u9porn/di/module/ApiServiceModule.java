@@ -41,7 +41,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/2/10
  */
 @Module

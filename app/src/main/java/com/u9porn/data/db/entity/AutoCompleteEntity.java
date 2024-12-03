@@ -10,7 +10,7 @@ import java.util.Date;
 /**
  * 存储用户名，设置地址等供AutoCompleteTextView使用
  *
- * @author flymegoc
+ * @author
  * @date 2018/2/7
  */
 @Entity

@@ -40,7 +40,7 @@ import butterknife.Unbinder;
  * 通用视频列表加载
  * A simple {@link Fragment} subclass.
  *
- * @author flymegoc
+ * @author
  */
 public class VideoListFragment extends MvpFragment<VideoListView, VideoListPresenter> implements VideoListView, SwipeRefreshLayout.OnRefreshListener {
 

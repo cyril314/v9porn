@@ -6,7 +6,7 @@ import android.os.Bundle;
 import com.u9porn.R;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class UploadVideoActivity extends AppCompatActivity {
 

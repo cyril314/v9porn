@@ -41,7 +41,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class ProxySettingActivity extends MvpActivity<ProxyView, ProxyPresenter> implements View.OnClickListener, ProxyView {
     private static final String TAG = ProxySettingActivity.class.getSimpleName();

@@ -6,7 +6,7 @@ import android.content.pm.PackageManager;
 /**
  * 应用版本工具
  *
- * @author flymegoc
+ * @author
  * @date 2017/12/23
  */
 

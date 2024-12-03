@@ -3,7 +3,7 @@ package com.u9porn.ui.about;
 import com.u9porn.ui.update.UpdateView;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2017/12/23
  */
 

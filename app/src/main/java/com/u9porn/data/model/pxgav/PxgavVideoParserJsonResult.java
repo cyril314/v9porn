@@ -3,7 +3,7 @@ package com.u9porn.data.model.pxgav;
 import java.util.List;
 
 /**pa视频解析json结果
- * @author flymegoc
+ * @author
  * @date 2018/1/28
  */
 

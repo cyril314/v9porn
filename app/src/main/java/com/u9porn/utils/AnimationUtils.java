@@ -6,7 +6,7 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/1/19
  */
 

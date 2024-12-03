@@ -4,7 +4,7 @@ import com.hannesdorfmann.mosby3.mvp.MvpView;
 import com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/2/6
  */
 

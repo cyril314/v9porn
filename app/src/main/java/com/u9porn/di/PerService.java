@@ -7,7 +7,7 @@ import javax.inject.Scope;
 
 /**
  *
- * @author flymegoc
+ * @author
  * @date 2018/2/4
  */
 @Scope

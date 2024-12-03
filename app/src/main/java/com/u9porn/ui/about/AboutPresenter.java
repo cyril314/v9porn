@@ -32,7 +32,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2017/12/23
  */
 

@@ -6,7 +6,7 @@ import com.trello.rxlifecycle2.LifecycleTransformer;
 import io.rx_cache2.Reply;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2017/11/17
  * @describe
  */

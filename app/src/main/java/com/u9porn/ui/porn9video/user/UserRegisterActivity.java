@@ -31,7 +31,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * @author flymegoc
+ * @author
  */
 public class UserRegisterActivity extends MvpActivity<UserView, UserPresenter> implements UserView {
     private static final String TAG = UserRegisterActivity.class.getSimpleName();

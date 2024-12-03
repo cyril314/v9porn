@@ -6,7 +6,7 @@ import java.util.List;
  * 收藏视频
  * json返回数据
  *
- * @author flymegoc
+ * @author
  * @date 2017/12/21
  */
 public class FavoriteJsonResult {

@@ -8,7 +8,7 @@ import retrofit2.http.Headers;
 import retrofit2.http.Query;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2018/1/21
  */
 

@@ -18,7 +18,7 @@ import javax.inject.Inject;
 import io.reactivex.disposables.Disposable;
 
 /**
- * @author flymegoc
+ * @author
  * @date 2017/11/15
  * @describe
  */
