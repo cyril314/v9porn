@@ -44,4 +44,3 @@ public class MySQLiteOpenHelper extends DaoMaster.OpenHelper {
         }, V9PornItemDao.class, VideoResultDao.class, CategoryDao.class);
     }
 }
-

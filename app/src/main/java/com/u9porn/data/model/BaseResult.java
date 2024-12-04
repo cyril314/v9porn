@@ -6,11 +6,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * @author
- * @date 2017/11/18
- * @describe
+ * @AUTO
+ * @Author AIM
+ * @DATE 2024/11/29
  */
-
 public class BaseResult<T> {
     public final static int SUCCESS_CODE = 1;
     public final static int ERROR_CODE = 2;

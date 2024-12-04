@@ -1,7 +1,7 @@
 package com.u9porn.adapter;
 
 import android.net.Uri;
-import androidx.annotation.Nullable;
+import android.annotation.Nullable;
 import android.text.format.Formatter;
 import android.widget.ImageView;
 

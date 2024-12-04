@@ -8,7 +8,6 @@ import java.io.Serializable;
  * @author
  * @date 2018/1/26
  */
-
 public class Notice implements Serializable {
     private static final long serialVersionUID = 1L;
 

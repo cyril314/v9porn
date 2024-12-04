@@ -24,8 +24,9 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * @author
- * @date 2018/1/17
+ * @AUTO
+ * @Author AIM
+ * @DATE 2024/11/29
  */
 @Singleton
 public class CommonHeaderInterceptor implements Interceptor {

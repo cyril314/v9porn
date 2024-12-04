@@ -6,12 +6,10 @@ import android.content.Context;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
 import com.danikula.videocache.HttpProxyCacheServer;
 import com.danikula.videocache.headers.HeaderInjector;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.u9porn.utils.Logger;
 import com.u9porn.constants.Constants;
 import com.u9porn.cookie.AppCookieManager;
 import com.u9porn.cookie.CookieManager;
@@ -28,23 +26,16 @@ import com.u9porn.di.ApplicationContext;
 import com.u9porn.di.DatabaseInfo;
 import com.u9porn.di.PreferenceInfo;
 import com.u9porn.parser.v9porn.VideoPlayUrlParser;
-
-
 import com.u9porn.parser.v9porn.d20210320.VideoUrlParser;
-import com.u9porn.utils.AddressHelper;
-import com.u9porn.utils.AppCacheUtils;
-import com.u9porn.utils.MyHeaderInjector;
-import com.u9porn.utils.VideoCacheFileNameGenerator;
-
-import java.io.File;
-
-import javax.inject.Singleton;
-
+import com.u9porn.utils.*;
 import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
 import io.rx_cache2.internal.RxCache;
 import io.victoralbertos.jolyglot.GsonSpeaker;
+
+import javax.inject.Singleton;
+import java.io.File;
 
 /**
  * @author
@@ -61,7 +52,7 @@ public abstract class ApplicationModule {
 
     @Singleton
     @Provides
-    static HttpProxyCacheServer providesHttpProxyCacheServer(@ApplicationContext Context context,HeaderInjector headerInjector) {
+    static HttpProxyCacheServer providesHttpProxyCacheServer(@ApplicationContext Context context, HeaderInjector headerInjector) {
         return new HttpProxyCacheServer.Builder(context)
                 // 1 Gb for cache
                 .headerInjector(headerInjector)
@@ -72,7 +63,8 @@ public abstract class ApplicationModule {
     }
 
     @Singleton
-    static @Provides HeaderInjector providesHeaderInjector(MyHeaderInjector myHeaderInjector){
+    static @Provides
+    HeaderInjector providesHeaderInjector(MyHeaderInjector myHeaderInjector) {
         return myHeaderInjector;
     }
 
@@ -80,9 +72,7 @@ public abstract class ApplicationModule {
     @Provides
     static CacheProviders providesCacheProviders(@ApplicationContext Context context) {
         File cacheDir = AppCacheUtils.getRxCacheDir(context);
-        return new RxCache.Builder()
-                .persistence(cacheDir, new GsonSpeaker())
-                .using(CacheProviders.class);
+        return new RxCache.Builder().persistence(cacheDir, new GsonSpeaker()).using(CacheProviders.class);
     }
 
     @Singleton
@@ -129,7 +119,7 @@ public abstract class ApplicationModule {
 
     @Provides
     @Singleton
-    static VideoPlayUrlParser provideVideoPlayUrlParser(VideoUrlParser videoUrlParser){
+    static VideoPlayUrlParser provideVideoPlayUrlParser(VideoUrlParser videoUrlParser) {
         return videoUrlParser;
     }
 
@@ -148,19 +138,17 @@ public abstract class ApplicationModule {
     @SuppressLint("SetJavaScriptEnabled")
     @Provides
     @Singleton
-    static WebView providesWebView(@ApplicationContext Context context){
+    static WebView providesWebView(@ApplicationContext Context context) {
         Logger.t(TAG).d("初始化");
         WebView mWebView = new WebView(context);
 
         WebSettings mWebSettings = mWebView.getSettings();
-
         //启用JavaScript。
         mWebSettings.setJavaScriptEnabled(true);
         mWebSettings.setUseWideViewPort(true);
         mWebSettings.setLoadsImagesAutomatically(false);
         mWebSettings.setBlockNetworkImage(true);
         mWebSettings.setJavaScriptCanOpenWindowsAutomatically(true);
-
         //mWebView.loadUrl("file:///android_asset/web/index.html"); //js文件路径
         mWebView.setWebViewClient(new WebViewClient() {
             @Override

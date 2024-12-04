@@ -22,7 +22,6 @@ import java.util.List;
  * @author
  * @date 2018/1/22
  */
-
 public class ParsePxgav {
     private static final String TAG = ParsePxgav.class.getSimpleName();
 
@@ -72,7 +71,7 @@ public class ParsePxgav {
      * Axgle首页解析
      */
     public static BaseResult<PxgavResultWithBlockId> videoList(String html, boolean isLoadMoreData) {
-        BaseResult<PxgavResultWithBlockId> baseResult = new BaseResult<>();
+        BaseResult<PxgavResultWithBlockId> baseResult = new BaseResult<PxgavResultWithBlockId>();
 
         PxgavResultWithBlockId pxgavResultWithBlockId = new PxgavResultWithBlockId();
 

@@ -19,7 +19,6 @@ import retrofit2.http.Url;
  * @date 2017/11/14
  * @describe
  */
-
 public interface V9PornServiceApi {
     /**
      * 主页index.php
@@ -199,7 +198,6 @@ public interface V9PornServiceApi {
     @POST("/post_comment.php")
     Observable<String> replyVideoComment(@Field("comment") String comment, @Field("username") String username, @Field("VID") String vId, @Field("comment_id") String commentId, @Header("Referer") String referer);
 
-
     /**
      * <a href="xxxxxx/search_result.php?viewtype=basic&amp;page=1&amp;search_type=search_videos&amp;search_id=内射&amp;sort=addate">添加时间</a>
      * 搜索
@@ -234,7 +232,6 @@ public interface V9PornServiceApi {
      * @param url 链接
      * @return ob
      */
-
     @GET
     @Headers({"Domain-Name: " + Api.PORN9_VIDEO_DOMAIN_NAME})
     Observable<Response<ResponseBody>> testV9Porn(@Url String url);
