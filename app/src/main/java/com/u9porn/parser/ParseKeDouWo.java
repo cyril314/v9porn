@@ -1,6 +1,5 @@
 package com.u9porn.parser;
 
-import com.u9porn.ui.google.GoogleRecaptchaVerifyActivity;
 import com.u9porn.utils.Logger;
 import com.u9porn.data.model.kedouwo.KeDouModel;
 import com.u9porn.data.model.kedouwo.KeDouRelated;
@@ -50,18 +49,17 @@ public class ParseKeDouWo {
         final String reg = "(video_url):\\s?'(.+?)'";
         Matcher m = getInfo(reg, data);
         if (m.find()) {
-            String videoUrl = m.group();
-            Logger.t(TAG).d("videoUrl: " + videoUrl);
+            Matcher u = getInfo("http.*?\\.mp4", m.group());
+            if (u.find()) {
+                String videoUrl = u.group();
+                Logger.t(TAG).d("videoUrl: " + videoUrl);
+                keDouRelated.setVideoUrl(videoUrl);
+            }
         }
         //从下载解析
         String videoUrl = document.select("div.info").last().getElementsByClass("item").last().select("a").attr("href");
         Logger.t(TAG).d("videoUrl: " + videoUrl);
-        Matcher v = getInfo("http.*?\\.mp4", videoUrl);
-        if (v.find()) {
-            String vrl = v.group();
-            Logger.t(TAG).d("videoUrl: " + vrl);
-            keDouRelated.setVideoUrl(vrl);
-        }
+        keDouRelated.setVideoUrl(videoUrl);
 
         Elements relatedList = document.select("#list_videos_related_videos_items").first().select(".item");
         List<KeDouModel> keDouModels = parseList(relatedList);
