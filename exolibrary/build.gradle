@@ -6,15 +6,22 @@ android {
     defaultConfig {
         minSdkVersion parent.ext.minSdkVersion
         targetSdkVersion parent.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode rootProject.ext.codeVersion
+        versionName rootProject.ext.apkVersion
         vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility parent.ext.javaVersion
+        targetCompatibility parent.ext.javaVersion
     }
 }
 

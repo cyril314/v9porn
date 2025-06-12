@@ -1,7 +1,6 @@
 package com.u9porn.adapter;
 
 import android.net.Uri;
-import android.annotation.Nullable;
 import android.text.format.Formatter;
 import android.widget.ImageView;
 
@@ -23,7 +22,7 @@ import java.util.List;
 
 public class DownloadVideoAdapter extends BaseQuickAdapter<V9PornItem, BaseViewHolder> {
 
-    public DownloadVideoAdapter(int layoutResId, @Nullable List<V9PornItem> data) {
+    public DownloadVideoAdapter(int layoutResId, List<V9PornItem> data) {
         super(layoutResId, data);
     }
 
@@ -64,7 +63,6 @@ public class DownloadVideoAdapter extends BaseQuickAdapter<V9PornItem, BaseViewH
                     helper.setText(R.id.tv_download_speed, "警告");
                     helper.setImageResource(R.id.iv_download_control, R.drawable.start_download);
                 }
-
             } else {
                 helper.setText(R.id.tv_download_speed, "暂停中");
                 helper.setImageResource(R.id.iv_download_control, R.drawable.start_download);
